@@ -1,0 +1,49 @@
+<div class="container" style="color:#b8b2b2;">
+    <div class="row">
+        <div class="col-2 my-2 float-right">
+            <div class="py-2 text-center" *ngIf="isAuthenticated">
+                <div *ngIf="!isSubscribed;else userSymbol">
+                    <button class="btn" (click)="subscribeMovie()">Add to Watchlist</button>
+                </div>
+                <ng-template #userSymbol>
+                    <button class="btn" (click)="unSubscribeMovie()" style="font-size: 12px">Remove from Watchlist</button>
+                </ng-template>
+            </div>
+
+            <img class="img-fluid" [src]="movie.poster " alt="Image failed to load " max-height="200px" max-width="150px">
+        </div>
+        <div class="col-8 my-2">
+            <h1 class="movie-text">{{movie.title}}({{movie.year}})</h1>
+            <div class="d-block my-2">
+                Director:
+                <a [routerLink]="['/movie/star-info/',director]" *ngFor="let director of movie.directors;" class="imdb badge badge-pill mr-2">{{director}}</a>
+            </div>
+            <div class="d-block my-2">
+                Writers:
+                <a [routerLink]="['/movie/star-info/',writer]" *ngFor=" let writer of movie.writers; " class="imdb badge badge-pill mr-2">{{writer}}</a>
+            </div>
+            <div class="d-block my-2">
+                Stars:
+                <a [routerLink]="['/movie/star-info/',star]" *ngFor="let star of movie.cast; " class="imdb badge badge-pill mr-2">{{star}}</a>
+            </div>
+            <div class="d-block my-2">
+                Genres:
+                <span *ngFor="let genre of movie.genres; " class="imdb badge badge-pill mr-2">{{genre}}</span>
+            </div>
+            <!-- <div class=" progress ">
+                <div class="progress-bar " role="progressbar " [ngStyle]="{width : ( movie.imdb.rating*10 + '%' ) } "></div>
+            </div> -->
+            <div class="d-block my-2">
+                <span class="imdb badge badge-pill mr-2">IMDB: {{movie.imdb.rating}}</span>
+                <span>from {{movie.imdb.votes}}<mat-icon>thumb_up</mat-icon>votes</span>
+            </div>
+        </div>
+
+        <small class="text-justify">{{movie.plot}}</small>
+    </div>
+    <hr align="center ">
+    <span class="movie-text ">Similar movies</span>
+</div>
+
+
+<app-movie-list [movies]="movies "></app-movie-list>

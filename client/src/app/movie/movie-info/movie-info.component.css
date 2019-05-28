@@ -1,0 +1,17 @@
+.imdb {
+    font-size: 12px;
+}
+
+.progress-bar {
+    background-color: rgb(131, 79, 42);
+    background-image: linear-gradient(to right, rgb(131, 79, 42) 0%, rgb(219, 161, 115) 50%, rgb(131, 79, 42) 100%);
+}
+
+a {
+    color: inherit;
+    text-decoration: none !important;
+}
+
+.img-fluid {
+    border-radius: 6px;
+}

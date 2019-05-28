@@ -1,0 +1,6 @@
+<div class="snack-bar">
+    <div class="movie-text text-center">{{message}}</div>
+    <div *ngIf="action" class="float-left">
+        <button mat-button type="button" color="warn" (click)="doAction()">{{action}}</button>
+    </div>
+</div>

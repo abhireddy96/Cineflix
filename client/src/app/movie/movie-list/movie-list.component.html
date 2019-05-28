@@ -1,0 +1,28 @@
+<!-- <div class="container text-center overflow-hidden py-4" style="color:white">
+    <mat-grid-list cols="4" gutterSize="10px">
+        <mat-grid-tile *ngFor="let movie of movies;">
+            <a [routerLink]="['/movie/movie-info/',movie.id]">
+                <img class="card-img-top" [src]="movie.poster" alt="Image failed to load">
+                <mat-grid-tile-footer style="font-size: 14px;color:white">
+                    <div class="movie-text ">{{movie.title}}({{movie.year}})</div>
+                </mat-grid-tile-footer>
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div> -->
+
+<div class="container pb-5">
+    <div class="cardList pb-2">
+        <div *ngFor="let movie of movies | paginate : config" class="py-3">
+            <a [routerLink]="['/movie/movie-info/',movie.id]">
+                <div class="cardListItem card">
+                    <img class="card-img-top" [src]="movie.poster" alt="Image failed to load">
+                    <div class="movie-text  text-center">{{movie.title}}({{movie.year}})</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="text-center" style="color:white !important">
+        <pagination-controls (pageChange)="pageChanged($event)" autoHide="true" class="my-pagination"></pagination-controls>
+    </div>
+</div>

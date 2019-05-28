@@ -1,0 +1,14 @@
+<div class="container align center text-center" style="color:white">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="movie-text">{{user.name}}</h2>
+            <p><strong>Email: </strong>{{user.email}}</p>
+            <!-- <p><strong>Genres: </strong>{{user.preferences.genres}}</p>
+            <p><strong>Stars: </strong>{{user.preferences.stars}}</p> -->
+        </div>
+    </div>
+    <hr align="center">
+    <span class="movie-text ">Your Watchlist</span>
+</div>
+
+<app-movie-list [movies]="movies "></app-movie-list>

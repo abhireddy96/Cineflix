@@ -1,0 +1,13 @@
+ul {
+    list-style-type: none;
+}
+
+.icon-bar a {
+    display: block;
+    padding-right: 8px;
+    transition: all 0.3s ease;
+}
+
+ul>li {
+    display: inline-block
+}

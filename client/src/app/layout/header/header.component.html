@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg" role="navigation">
+    <a class="navbar-brand py-0" routerLink="">
+        <div class="navbar-brand movie-text py-0">Cineflix</div>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link py-0" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-0" routerLink="movie" routerLinkActive="active">Movie</a>
+            </li>
+        </ul>
+        <app-search></app-search>
+    </div>
+    <div class="my-2 my-lg-0">
+        <div *ngIf="!logged;else userSymbol">
+            <button type="button" class="btn" routerLink="login">Login</button>
+            <button type="button" class="btn" routerLink="signup">Signup</button>
+        </div>
+        <ng-template #userSymbol>
+            <div class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <img height="64px" width="64px" src="/assets/img/user.png">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right" style="background-color: black;color:white">
+                    <li><a class="dropdown-item" (click)="logout() ">Logout</a></li>
+                    <li><a class="dropdown-item " [routerLink]="[ '/user'] ">My Account</a></li>
+                </ul>
+            </div>
+        </ng-template>
+    </div>
+</nav>
+
+<!-- <div class="sidenav">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a>
+</div> -->

@@ -1,0 +1,15 @@
+<div class="fluid-container">
+    <div class="text-center py-2">
+        <span class="movie-text">Login</span>
+    </div>
+    <div class="row justify-content-center align-items-center">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" ngModel placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" ngModel placeholder="Password">
+            </div>
+            <button type="submit " class="btn">Login</button>
+        </form>
+    </div>

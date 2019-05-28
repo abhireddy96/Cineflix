@@ -1,0 +1,22 @@
+<!-- <div class="container text-center overflow-hidden py-4" style="color:white">
+    <mat-grid-list cols="3" gutterSize="15px">
+        <mat-grid-tile class="card" *ngFor="let movie of movies;">
+            <a [routerLink]="['/movie/movie-info/',movie.id]">
+                <img class="card-img-top" [src]="movie.poster" alt="Image failed to load">
+                <div class="card-body" style="font-size: 14px;color:white">
+                    <div class="movie-text ">{{movie.title}}({{movie.year}})</div>
+                    <div class="d-inline"><b>{{movie.runtime}}</b> min - {{movie.genres}}</div>
+                    <div class="card-text-content">
+                        <b>Director: </b> {{movie.directors}}
+                    </div>
+                    <div class="card-text-content">
+                        <b>Stars: </b>{{movie.cast}}
+                    </div>
+                    <span class="imdb badge badge-pill">IMDB: {{movie.imdb.rating}}</span>
+                </div>
+            </a>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div> -->
+
+<app-movie-list [movies]="movies"></app-movie-list>

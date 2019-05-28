@@ -1,0 +1,54 @@
+.navbar {
+    background-color: #131212de;
+    display: flex;
+    font-weight: 500;
+    position: relative;
+    min-height: 32px !important;
+}
+
+.navbar-nav>li>a {
+    padding-top: 2px !important;
+    padding-bottom: 3px !important;
+}
+
+.nav-item,
+.navbar-brand,
+.nav-link {
+    color: #f2f2f3;
+}
+
+.nav-link {
+    font-size: 18px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.btn {
+    color: #382e2e;
+    background-image: linear-gradient(to right, rgb(131, 79, 42) 0%, rgb(219, 161, 115) 50%, rgb(131, 79, 42) 100%);
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.movie-text {
+    background-image: linear-gradient(to right, rgb(131, 79, 42) 0%, rgb(219, 161, 115) 50%, rgb(131, 79, 42) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 40px;
+}
+
+.dropdown-item {
+    color: white
+}
+
+.snack-bar {
+    background: white;
+    color: black;
+}

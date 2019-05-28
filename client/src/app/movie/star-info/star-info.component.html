@@ -1,0 +1,16 @@
+<div class="container" style="color:white;max-height: 250px;">
+    <div class="row">
+        <div class="col-2 my-2">
+            <img class="fluid-img" [src]="star.image" alt="Image failed to load" height="150px" max-width="200px">
+        </div>
+        <div class="col-10 text-left">
+            <h2 class="movie-text">{{star.name}}</h2>
+            <p><strong>Born: </strong>{{star.born}}</p>
+            <p style="font-size: 12px">{{star.bio}}</p>
+        </div>
+    </div>
+    <hr align="center">
+    <span class="movie-text">Known For</span>
+</div>
+
+<app-movie-list [movies]="movies"></app-movie-list>

@@ -1,0 +1,13 @@
+<form class="form-inline my-2 my-lg-0">
+    <input (keyup)="onKeyEnter($event.target.value)" (search)="clearSearch()" (blur)="clearSearch()" class="form-control mr-sm-2" type="search" placeholder="Search" #searchfield>
+    <span id="searchclear" class="glyphicon glyphicon-remove-circle" (click)="searchfield.value=''"></span>
+</form>
+
+<section class="list-group text-center overflow-auto py-3" *ngIf="movies">
+    <div *ngFor="let movie of movies | slice:0:9" class="list-group-item list-group-item-action flex-column align-items-start">
+        <a [routerLink]="['/movie/movie-info/',movie.id]">
+            <img class="img float-left" [src]="movie.poster" alt="Image failed to load" height="50px" width="50px">
+            <span class="movie-text"> {{movie.title}}({{movie.year}})</span>
+        </a>
+    </div>
+</section>

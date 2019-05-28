@@ -1,0 +1,12 @@
+input::placeholder {
+    color: #f2f2f3 !important;
+    opacity: 1 !important;
+}
+
+input {
+    background-color: #1f1e1c;
+}
+
+input:focus {
+    outline: none;
+}
