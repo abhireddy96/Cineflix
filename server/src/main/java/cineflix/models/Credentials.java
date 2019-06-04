@@ -1,6 +1,6 @@
 package cineflix.models;
 
-public class Credentials {
+public class Credentials{
 
   private String password;
   private String email;

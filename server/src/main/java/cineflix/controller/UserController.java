@@ -26,8 +26,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cineflix.models.Login;
 import cineflix.models.User;
-import cineflix.models.UserField;
 import cineflix.models.UserRegistry;
+import cineflix.models.enums.UserField;
 import cineflix.services.UserService;
 
 @CrossOrigin(origins = "*")

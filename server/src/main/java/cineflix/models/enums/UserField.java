@@ -1,4 +1,4 @@
-package cineflix.models;
+package cineflix.models.enums;
 
 public enum UserField {
 

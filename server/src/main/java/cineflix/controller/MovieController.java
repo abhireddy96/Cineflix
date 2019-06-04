@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import cineflix.models.Movie;
-import cineflix.models.MovieField;
+import cineflix.models.enums.MovieField;
 import cineflix.services.MovieService;
 
 @RestController

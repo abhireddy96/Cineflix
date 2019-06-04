@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.core.query.TextQuery;
 import org.springframework.stereotype.Service;
 
 import cineflix.models.Movie;
-import cineflix.models.MovieField;
+import cineflix.models.enums.MovieField;
 import cineflix.repository.MovieRepository;
 
 @Service

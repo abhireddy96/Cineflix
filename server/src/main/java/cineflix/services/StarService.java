@@ -11,7 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import cineflix.models.Star;
-import cineflix.models.StarField;
+import cineflix.models.enums.StarField;
 import cineflix.repository.StarRepository;
 
 @Service
